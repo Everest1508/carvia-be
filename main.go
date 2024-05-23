@@ -1,8 +1,14 @@
 package main
 
-import "fmt"
+import (
+	"github.com/everest1508/carvia/db"
+	"github.com/everest1508/carvia/routes"
+)
 
-func main(){
-	fmt.Println("heyy")
+func init(){
+	db.DBConnect()
 }
 
+func main(){
+	routes.BlogRoute()
+}
